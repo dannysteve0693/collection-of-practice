@@ -8,6 +8,22 @@
 <body>
     <h1>Todo Application</h1>
 <div>
+    <form action="/" method="post">
+        <div>
+            <label for="title">Input new task </label>
+            <input type="text"
+                   id="title"
+                   name="title"
+                   placeholder="Add new task..."
+                   required="required" />
+
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+
     <th:block th:each="task : ${tasks}">
         <div th:text="${task.title}">Task Title</div>
     </th:block>

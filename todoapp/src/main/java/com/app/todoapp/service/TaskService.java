@@ -3,10 +3,12 @@ package com.app.todoapp.service;
 import com.app.todoapp.models.Task;
 import com.app.todoapp.repository.TaskRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@Transactional
 public class TaskService {
     private final TaskRepository taskRepository;
 
